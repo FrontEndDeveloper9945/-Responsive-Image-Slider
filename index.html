@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="sliders" style="--img: url('img1.jpeg')">
+                <div class="content">
+                    <h2>Slide 01</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi obcaecati suscipit
+                        quaerat architecto dolores nobis enim rem! Aliquam ullam quaerat expedita debitis eum voluptates
+                        quasi optio corporis, perferendis doloremque!
+                    </p>
+                </div>
+            </div>
+            <div class="sliders" style="--img: url('img2.jpg')">
+                <div class="content">
+                    <h2>Slide 02</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi obcaecati suscipit
+                        quaerat architecto dolores nobis enim rem! Aliquam ullam quaerat expedita debitis eum voluptates
+                        quasi optio corporis, perferendis doloremque!
+                    </p>
+                </div>
+            </div>
+            <div class="sliders" style="--img: url('img3.jpeg')">
+                <div class="content">
+                    <h2>Slide 03</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi obcaecati suscipit
+                        quaerat architecto dolores nobis enim rem! Aliquam ullam quaerat expedita debitis eum voluptates
+                        quasi optio corporis, perferendis doloremque!
+                    </p>
+                </div>
+            </div>
+            <div class="sliders" style="--img: url('img4.jpg')">
+                <div class="content">
+                    <h2>Slide 04</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi obcaecati suscipit
+                        quaerat architecto dolores nobis enim rem! Aliquam ullam quaerat expedita debitis eum voluptates
+                        quasi optio corporis, perferendis doloremque!
+                    </p>
+                </div>
+            </div>
+            <div class="sliders" style="--img: url('img5.jpeg')">
+                <div class="content">
+                    <h2>Slide 05</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi obcaecati suscipit
+                        quaerat architecto dolores nobis enim rem! Aliquam ullam quaerat expedita debitis eum voluptates
+                        quasi optio corporis, perferendis doloremque!
+                    </p>
+                </div>
+            </div>
+            <div class="sliders" style="--img: url('img6.avif')">
+                <div class="content">
+                    <h2>Slide 06</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi obcaecati suscipit
+                        quaerat architecto dolores nobis enim rem! Aliquam ullam quaerat expedita debitis eum voluptates
+                        quasi optio corporis, perferendis doloremque!
+                    </p>
+                </div>
+            </div>
+            <div class="sliders" style="--img: url('img7.jpg')">
+                <div class="content">
+                    <h2>Slide 07</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi obcaecati suscipit
+                        quaerat architecto dolores nobis enim rem! Aliquam ullam quaerat expedita debitis eum voluptates
+                        quasi optio corporis, perferendis doloremque!
+                    </p>
+                </div>
+            </div>
+            <div class="sliders" style="--img: url('img8.jpg')">
+                <div class="content">
+                    <h2>Slide 08</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi obcaecati suscipit
+                        quaerat architecto dolores nobis enim rem! Aliquam ullam quaerat expedita debitis eum voluptates
+                        quasi optio corporis, perferendis doloremque!
+                    </p>
+                </div>
+            </div>
+            <div class="sliders" style="--img: url('img9.jpg')">
+                <div class="content">
+                    <h2>Slide 09</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi obcaecati suscipit
+                        quaerat architecto dolores nobis enim rem! Aliquam ullam quaerat expedita debitis eum voluptates
+                        quasi optio corporis, perferendis doloremque!
+                    </p>
+                </div>
+            </div>
+            <div class="sliders" style="--img: url('img10.jpg')">
+                <div class="content">
+                    <h2>Slide 10</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi obcaecati suscipit
+                        quaerat architecto dolores nobis enim rem! Aliquam ullam quaerat expedita debitis eum voluptates
+                        quasi optio corporis, perferendis doloremque!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <span class="prev"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></span>
+            <span class="next"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></span>
+        </div>
+    </div>
+    <script>
+        const next = document.querySelector('.next');
+        const prev = document.querySelector('.prev');
+        const slider = document.querySelector('.slider');
+
+        next.addEventListener('click', function () {
+            const slides = document.querySelectorAll('.sliders')
+            slider.appendChild(slides[0])
+        })
+        prev.addEventListener('click', function () {
+            const slides = document.querySelectorAll('.sliders')
+            slider.prepend(slides[slides.length - 1])
+        })
+    </script>
+</body>
+
+</html>
